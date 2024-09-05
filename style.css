@@ -1,0 +1,961 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 100%;
+    transition: all 0.3s ease;
+    position: fixed;
+    z-index: 1000;
+
+}
+
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 12px;
+}
+
+.navbar ul li a {
+    color: #2C2C2C;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and size */
+    display: inline-block;
+
+
+}.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+    transition: transform 0.3s ease;
+    margin-right: 10px; /* Adjust spacing between the logo and text */
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.logo-text p {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #2C2C2C;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+}
+
+.logo-text a:hover {
+    color: #000; /* Optional: Change color on hover */
+}
+
+.nav-right a.active, .nav-left a.active {
+    color: #C0C0C0; /* Same as hover color */
+    transform: scale(1.1); /* Slightly increase the size */
+
+}
+
+.navbar ul li a:hover {
+    color: #C0C0C0;
+    transform: scale(1.1); /* Slightly increase the size */
+
+}
+
+
+.button-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    margin-bottom: 106px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-treatments {
+    background-color: #2C2C2C; /* Blue background color for "Lihat Treatment" */
+}
+
+.btn-appointment {
+    background-color: #2C2C2C; /* Green background color for "Book an Appointment" */
+}
+
+
+
+.btn:hover {
+    background-color: #3A3A3A; /* Darker blue for hover effect on "Lihat Treatment" */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.btn-appointment:hover {
+    background-color: #3A3A3A; /* Darker green for hover effect on "Book an Appointment" */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.menu-section {
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Menyelaraskan konten secara vertikal */
+        width: 100%; /* Memastikan lebar section 100% dari viewport */
+        height: 100%; /* Memastikan tinggi section 100% dari viewport */
+        padding-top: 80px; /* Padding untuk section menu */
+        box-sizing: border-box; /* Memastikan padding dihitung dalam ukuran total */
+        overflow: hidden; /* Menyembunyikan bagian konten yang melampaui batas */
+   
+}
+
+.menu-item {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px; /* Jarak antara item menu */
+}
+
+.image-text-container {
+    position: relative;
+    width: 100vw; /* Memastikan container memenuhi lebar layar */
+    height: 80vh; /* Mengatur tinggi container sesuai dengan gambar */
+    overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari container */
+}
+
+.image-text-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Mengatur gambar memenuhi tinggi container */
+    object-fit: cover; /* Memastikan gambar menutupi seluruh area tanpa distorsi */
+    display: block; /* Menghindari space tambahan di bawah gambar */
+    overflow: hidden; /* Menyembunyikan bagian konten yang melampaui batas */
+    filter: brightness(50%);
+}
+
+.text-overlay {
+    position: absolute;
+    top: 40%; /* Menempatkan teks di tengah vertikal gambar */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 48px; /* Ukuran font sesuai dengan kebutuhan desain */
+    font-family: 'Poppins', sans-serif; /* Menggunakan font Playfair Display */
+    font-weight: bold;
+    text-align: center;
+    pointer-events: none; /* Menyebabkan teks tidak memblokir klik pada gambar */
+
+}
+
+.text-overlay-2 {
+    position: absolute;
+    top: 56%; /* Menempatkan teks di bawah sedikit dari pusat gambar */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 20px; /* Ukuran font sesuai dengan kebutuhan desain */
+    font-family: 'Poppins', sans-serif;  /* Menggunakan font Playfair Display */
+    text-align: center;
+    pointer-events: none; /* Menyebabkan teks tidak memblokir klik pada gambar */
+}
+
+
+/* about us */
+
+.about-us .logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+.about-us {
+background-color: #F8F4F4; /* Warna latar belakang soft untuk area About Us */
+padding-top: 120px;
+padding-bottom: 80px;
+text-align: center; /* Teks di tengah */
+}
+
+.about-us h2 {
+    font-family: 'Playfair Display', serif; /* Font untuk judul */
+    font-size: 32px; /* Ukuran font judul */
+    font-weight: bold;
+    color: #2C2C2C; /* Warna judul */
+    margin-bottom: 20px; /* Jarak bawah judul */
+}
+
+.about-us p {
+    font-family: 'Poppins', sans-serif; /* Font untuk paragraf */
+    font-size: 18px; /* Ukuran font paragraf */
+    color: #333; /* Warna teks paragraf */
+    line-height: 1.6; /* Jarak antar baris */
+    margin: 0 auto; /* Margin otomatis untuk memusatkan teks */
+    padding-top: 0px;
+    max-width: 800px; /* Lebar maksimal paragraf */
+}
+
+
+/* CSS REVIEW */
+.review {
+    background-color: #F9F9F9; /* Light background */
+    padding: 120px 80px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.review h2 {
+   font-family: 'Playfair Display', serif; /* Font untuk judul */
+    
+    color: #2C2C2C; /* Soft black color for heading */
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.review p {
+    color: #2C2C2C;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Section styling */
+/* CSS Treatment */
+.treatment {
+    background-color: #ffffff; /* Warna latar belakang soft untuk area About Us */
+    padding-top: 120px; /* Padding untuk section */
+    text-align: center; /* Teks di tengah */
+}
+
+.slides-container {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: 400%; /* Jika ada 3 slide, ini harus 300% */
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.treatment h2 {
+    font-family: 'Playfair Display', serif; /* Font untuk judul */
+    font-size: 32px; /* Ukuran font judul */
+    font-weight: bold;
+    color: #2C2C2C; /* Warna judul */
+    margin-bottom: 20px; /* Jarak bawah judul */
+}
+
+.treatment-card p {
+    overflow: hidden; /* Menyembunyikan teks yang melebihi batas */
+    text-overflow: ellipsis; /* Menambahkan elipsis (...) jika teks terlalu panjang */
+    white-space: 0; /* Mencegah teks melambung ke baris baru */
+    max-height: 150px; /* Membatasi tinggi paragraf jika diperlukan */
+}
+
+
+/* Gaya umum untuk kedua card */
+.treatment-card {
+    background-color: #fff; /* Warna latar belakang kartu */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    transition: transform 0.3s ease;
+    max-width: 360px; /* Lebar maksimal kartu */
+    margin: auto; /* Memusatkan kartu di kolom */
+    height: 400px; /* Tinggi tetap kartu */
+    display: flex;
+    flex-direction: column;
+}
+.treatment-card2 {
+    background-color: #fff; /* Warna latar belakang kartu */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    transition: transform 0.3s ease;
+    max-width: 360px; /* Lebar maksimal kartu */
+    margin: auto; /* Memusatkan kartu di kolom */
+    height: 400px; /* Tinggi tetap kartu */
+    display: flex;
+    flex-direction: column;
+}
+.treatment-card3 {
+    background-color: #fff; /* Warna latar belakang kartu */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    transition: transform 0.3s ease;
+    max-width: 360px; /* Lebar maksimal kartu */
+    margin: auto; /* Memusatkan kartu di kolom */
+    height: 400px; /* Tinggi tetap kartu */
+    display: flex;
+    flex-direction: column;
+}
+.treatment-card:hover, .treatment-card2:hover, .treatment-card3 {
+    transform: scale(1.05); /* Zoom-in saat hover */
+}
+
+.treatment-card img, .treatment-card2 img , .treatment-card3 img {
+    width: 100%;
+    height: 200px; /* Tinggi gambar sesuai kebutuhan */
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.treatment-name {
+    font-size: 1.2em; /* Ukuran font nama perawatan */
+    margin: 0;
+    color: #D88CA6; /* Warna nama perawatan */
+}
+
+.treatment-description {
+    font-size: 0.9em; /* Ukuran font penjelasan */
+    color: #666; /* Warna teks penjelasan */
+}
+
+.treatment-price {
+    font-size: 1em; /* Ukuran font harga */
+    font-weight: bold;
+    color: #D88CA6; /* Warna harga */
+    margin-top: 10px;
+}
+
+/* Gaya untuk teks paragraf di kedua card */
+.treatment-card p, .treatment-card2 p, .treatment-card3 p {
+    overflow: hidden; /* Menyembunyikan teks yang melebihi batas */
+    text-overflow: ellipsis; /* Menambahkan elipsis (...) jika teks terlalu panjang */
+    white-space: none; /* Mencegah teks melambung ke baris baru */
+    max-height: 150px; /* Membatasi tinggi paragraf jika diperlukan */
+}
+
+.treatments-section {
+    position: relative;
+    padding: 0px 20px; /* Padding atas dan samping */
+    padding-bottom: 80px; /* Padding bawah */
+    background-color: #FFFFFF; /* Warna latar belakang */
+    overflow: hidden; /* Menangani overflow jika diperlukan */
+}
+
+
+.slide {
+    width: 25%; /* Adjust width based on number of slides */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.treatment-card, .treatment-card2 , .treatment-card3{
+    flex: 0 0 45%; /* Adjust card size relative to the slide */
+    margin: 10px;
+}
+
+.prev-slide, .next-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    background: transparent;
+}
+
+.prev-slide {
+    left: 20px;
+}
+
+.next-slide {
+    right: 20px;
+}
+
+
+/*  css review */
+
+.review-spa {
+    background-color: #F8F4F4; /* Warna latar belakang soft untuk area About Us */
+    padding-top: 120px; /* Padding untuk section */
+    padding-bottom: 20px;
+    text-align: center; /* Teks di tengah */
+}
+
+.review-spa h2 {
+    font-family: 'Playfair Display', serif; /* Font untuk judul */
+    font-size: 32px; /* Ukuran font judul */
+    font-weight: bold;
+    color: #2C2C2C; /* Warna judul */
+    margin-bottom: 20px; /* Jarak bawah judul */
+}
+
+.review-spa p {
+    font-family: 'Poppins', sans-serif; /* Font untuk paragraf */
+    font-size: 18px; /* Ukuran font paragraf */
+    color: #2C2C2C; /* Warna teks paragraf */
+    line-height: 1.6; /* Jarak antar baris */
+    margin: 0 auto; /* Margin otomatis untuk memusatkan teks */
+    max-width: 800px; /* Lebar maksimal paragraf */
+}
+
+/*  css book an appointment */
+
+/* CSS untuk Book an Appointment */
+.book-appointment-section {
+    background-color: #FFFFFF; /* Warna latar belakang */
+    padding: 120px 80px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+
+.book-appointment-section p {
+    color: #2C2C2C;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.book-appointment-section h2 {
+    font-size: 32px;
+    color: #2C2C2C;
+}
+
+.booking-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.booking-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+}
+
+.card-logo {
+    width: 60px; /* Ukuran logo */
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.card-content {
+    margin-top: 10px;
+}
+
+.card-content h3 {
+    font-size: 20px;
+    color: #2C2C2C;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #2C2C2C;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555555;
+}
+
+/* Styling untuk masing-masing card */
+.booking-card:nth-child(1) .btn {
+    background-color: #25D366; /* Warna tombol WhatsApp */
+}
+
+.booking-card:nth-child(1) .btn:hover {
+    background-color: #1EBE4E;
+}
+
+.booking-card:nth-child(2) .btn {
+    background-color: #E1306C; /* Warna tombol Instagram */
+}
+
+.booking-card:nth-child(2) .btn:hover {
+    background-color: #C13584;
+}
+
+.booking-card:nth-child(3) .btn {
+    background-color: #34b7f1; /* Warna tombol Telepon */
+}
+
+.booking-card:nth-child(3) .btn:hover {
+    background-color: #1e9ce8;
+}
+
+
+.map-container iframe {
+    width : 425px;
+     height: 350px;
+}
+
+.location-section {
+    padding: 120px 80px;
+    text-align: center;
+    background-color: #f7f7f7;
+    color: #2C2C2C;
+    font-family: 'Playfair Display', serif;;
+}
+
+.location-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #2C2C2C;
+}
+
+.location-section p {
+    font-family: 'Poppins', sans-serif; /* Font untuk paragraf */
+    font-size: 18px; /* Ukuran font paragraf */
+    color: #333; /* Warna teks paragraf */
+    line-height: 1.6; /* Jarak antar baris */
+    margin: 0 auto; /* Margin otomatis untuk memusatkan teks */
+    padding-top: 0px;
+    max-width: 800px; /* Lebar maksimal paragraf */
+}
+
+.map-container {
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: 'Playfair Display', serif;;
+}
+
+.map-container img {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.location-info {
+    margin-top: 20px;
+}
+
+.location-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.location-info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.location-info .btn {
+    background-color: #2C2C2C;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.location-info .btn:hover {
+    background-color: #444444;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #FFFFFF; /* Background color */
+    color: #666; /* Light grey for text */
+    font-family: 'Playfair Display', serif;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 10px;
+    min-width: 220px;
+}
+
+.footer-column h2 {
+    color: #2C2C2C; /* Accent color for headings */
+    border-bottom: 2px solid #2C2C2C;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-column p, .footer-column ul {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #2C2C2C; /* Accent color for links */
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-media ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-media ul li {
+    list-style: none;
+}
+
+.social-media ul li a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-media ul li a img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    background-color: #1a1a1a; /* Darker grey for bottom section */
+    padding: 15px 0;
+    margin-top: 40px;
+    color: #aaa;
+    font-size: 12px;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 14px; /* Adjust to match your layout */
+}
+.bar {
+    width: 16px;
+    height: 3px;
+    background-color: #0f0f0f;
+    margin: 2px 0;
+    border-radius: 5px;
+}
+
+.close-btn {
+    display: none;
+    position: absolute;
+    top: 22px; /* Adjust to align with your navbar */
+    right: 14px; /* Align with hamburger */
+    font-size: 30px;
+    color: #000000;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it is above the menu */
+}
+
+
+@media (min-width: 300px) and (max-width: 768px) {
+
+.text-overlay {
+    position: absolute;
+    top: 40%; /* Menempatkan teks di tengah vertikal gambar */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 28px; /* Ukuran font sesuai dengan kebutuhan desain */
+    font-family: 'Poppins', serif; /* Menggunakan font Playfair Display */
+    font-weight: bold;
+    text-align: center;
+    pointer-events: none; /* Menyebabkan teks tidak memblokir klik pada gambar */
+    width: 90%; /* Lebar teks lebih luas dari container */
+    max-width: 700px; /* Maksimal lebar teks */
+    padding: 0 10px; 
+}
+
+
+.text-overlay-2 {
+    position: absolute;
+    top: 48%; /* Menempatkan teks di bawah sedikit dari pusat gambar */
+    left: 50%;
+    transform: translateX(-50%); /* Hanya translasi horizontal */
+    color: #fff;
+    font-size: 14px; /* Ukuran font sedikit lebih besar untuk visibilitas */
+    font-family: 'Poppins', serif; /* Menggunakan font Poppins */
+    font-weight: bold;
+    text-align: center;
+    pointer-events: none; /* Menyebabkan teks tidak memblokir klik pada gambar */
+    width: 90%; /* Lebar teks lebih luas dari container */
+    max-width: 700px; /* Maksimal lebar teks */
+    padding: 0 0 0 0; /* Tambahkan padding horizontal jika diperlukan */
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+.nav-left {
+    display: flex;
+    flex-direction: column;
+    position: fixed; /* Use fixed position to ensure it stays on top */
+    top: 148px; /* Adjust to align with the height of your navbar */
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 0; /* Initially hidden */
+    opacity: 0;
+    z-index: 1001;
+
+}
+
+.nav-right {
+    display: flex;
+    flex-direction: column;
+    position: fixed; /* Use fixed position to ensure it stays on top */
+    top: 76px; /* Adjust to align with the height of your navbar */
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 0; /* Initially hidden */
+    opacity: 0;
+    z-index: 1001;
+}
+
+
+
+.nav-left li,
+.nav-right li {
+    margin: 10px 0;
+}
+
+.nav-left.active,
+.nav-right.active {
+    max-height: 600px; /* Adjust based on your content */
+    opacity: 1;
+}
+
+
+.hamburger {
+    display: flex; /* Show hamburger */
+}
+
+.close-btn {
+    display: none; /* Hide close button by default */
+}
+
+.slide {
+    width: 25%; /* Adjust width based on number of slides */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.slides-container {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: 400%; /* Jika ada 3 slide, ini harus 300% */
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.about-us p {
+    font-family: 'Poppins', sans-serif; /* Font untuk paragraf */
+    font-size: 18px; /* Ukuran font paragraf */
+    color: #333; /* Warna teks paragraf */
+    line-height: 1.6; /* Jarak antar baris */
+    margin: 0 auto; /* Margin otomatis untuk memusatkan teks */
+    padding-top: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 800px; /* Lebar maksimal paragraf */
+}
+
+.treatment p {
+
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.treatments-section .slide .treatment-card,
+.treatments-section .slide .treatment-card2,
+.treatments-section .slide .treatment-card3 {
+    flex: 1 1 calc(50% - 10px); /* Adjust width for 2 cards per slide */
+
+}
+
+.treatments-section .slide {
+    flex-wrap: wrap; /* Wrap cards to next row if needed */
+}
+
+.logo-text p {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: #2C2C2C;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    align-items: center;}
+
+
+.logo img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s ease;
+margin-right: 24px;
+}
+.navbar {
+    padding: 0px;
+    padding-left: 14px;
+    padding-top: 10px;
+}
+
+.treatment-card {
+    max-width: 280px; /* Lebar maksimal kartu */
+    height: 400px; /* Tinggi tetap kartu */
+
+}
+.treatment-card2 {
+    max-width: 280px; /* Lebar maksimal kartu */
+    height: 400px; /* Tinggi tetap kartu */
+ 
+}
+.treatment-card3 {
+    max-width: 280px; /* Lebar maksimal kartu */
+  height: 400px; /* Tinggi tetap kartu */
+ 
+}
+
+
+.button-container {
+    position: absolute;
+    bottom: 30px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20%; /* Jarak bawah dari elemen lain */
+    align-items: center;
+    justify-content: center;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px; /* Sesuaikan padding untuk memperlebar button */
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+
+.btn-treatments {
+    background-color: #2C2C2C; /* Blue background color for "Lihat Treatment" */
+}
+
+.btn-appointment {
+    background-color: #2C2C2C; /* Green background color for "Book an Appointment" */
+}
+
+.btn:hover {
+    background-color: #3A3A3A; /* Darker blue for hover effect on "Lihat Treatment" */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.btn-appointment:hover {
+    background-color: #3A3A3A; /* Darker green for hover effect on "Book an Appointment" */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.map-container {
+    max-width: 100%; /* Memastikan container tidak melebihi lebar layar */
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+}
+
+
+
+.map-container iframe {
+    width : 300px;
+     height: 325px;
+}
+}
